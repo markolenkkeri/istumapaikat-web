@@ -2,7 +2,7 @@
 Tool for randomizing seat locations. Same as istumapaikat, but in webapp format.
 
 ## Installation
-Clone this repository. Run `./gradlew bootRun` or `gradlew.bat bootRun`
+Clone this repository. Run `./gradlew bootRun` or `gradlew.bat bootRun` or install Gradle and Grails with http://sdkman.io .
 
 ## Usage
 Call http://localhost:8080/action/randomize
