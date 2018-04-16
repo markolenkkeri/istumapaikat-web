@@ -6,6 +6,7 @@ Clone this repository. Run `./gradlew bootRun` or `gradlew.bat bootRun` or insta
 
 ## Usage
 Call http://localhost:8080/action/randomize for a good t... for a distribution of seatconsumers to rooms
+
 Call http://localhost:8080/action/draftpicks for a randomized seatconsumer list
 
 ## Contents
