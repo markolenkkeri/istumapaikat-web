@@ -5,7 +5,8 @@ Tool for randomizing seat locations. Same as istumapaikat, but in webapp format.
 Clone this repository. Run `./gradlew bootRun` or `gradlew.bat bootRun` or install Gradle and Grails with http://sdkman.io .
 
 ## Usage
-Call http://localhost:8080/action/randomize
+Call http://localhost:8080/action/randomize for a good t... for a distribution of seatconsumers to rooms
+Call http://localhost:8080/action/draftpicks for a randomized seatconsumer list
 
 ## Contents
 Grails application (Grails 3.3.4) with in memory database, JSON marshallers and CSV readers. See `grails-app/controllers` and `grails-app/services` for core functionalities. Rest in `grails-app/init` and `grails-app/domain`. 
