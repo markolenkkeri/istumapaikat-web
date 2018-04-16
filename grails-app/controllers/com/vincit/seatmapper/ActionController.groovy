@@ -12,6 +12,11 @@ class ActionController {
         render finalRoomList as JSON
     }
 
+    def draftpicks() {
+        def seatConsumerList = SeatConsumer.list()?.sort { Math.random() }
+        render seatConsumerList as JSON
+    }
+
     def initialize() {
         Room.deleteAll(Room.list())
         SeatConsumer.deleteAll(SeatConsumer.list())
