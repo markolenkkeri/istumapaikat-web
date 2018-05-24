@@ -65,18 +65,19 @@ class ActionService {
 
     def initialize()
     {
+	//TODO: Make filenames env/conf based
         File roomsFile = new File("rooms.csv")
-        File seatConsumersFile = new File("seatconsumers.csv")
+        File seatConsumersFile = new File("actualseatconsumers.csv")
         println "Reading CSV files"
         def data = parseCsv(roomsFile?.newReader("UTF-8"))
         data?.each { line ->
-            Room room = [id: (line.id as Integer), seats: (line.seats as Integer), description: line.description, category: (line.category as Integer)]
+            Room room = [roomId: (line.id as Integer), seats: (line.seats as Integer), description: line.description, category: (line.category as Integer)]
             room.save(flush:true)
         }
 
         data = parseCsv(seatConsumersFile?.newReader("UTF-8"))
         data?.each { line ->
-            SeatConsumer seatConsumer = [count: (line.count as Integer), description: line.description, category: (line.category as Integer), strict: (line.strict as Integer)==1]
+            SeatConsumer seatConsumer = [count: (line.count as Integer), description: line.description, category: (line.category as Integer), strict: (line.strict as Integer)==1, name: line.name]
             seatConsumer.save(flush:true)
         }
         println "Read complete"

@@ -2,6 +2,7 @@ package com.vincit.seatmapper
 
 class Room {
 
+    Integer roomId
     Integer seats
     Integer currentSeats
     String description

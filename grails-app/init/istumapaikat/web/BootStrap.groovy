@@ -11,7 +11,7 @@ class BootStrap {
         actionService.initialize()
         JSON.registerObjectMarshaller(Room) {
             def marshallerMap = [
-                    "id":it.id,
+                    "id":it.roomId,
                     "seats":it.seats,
                     "currentSeats":it.currentSeats,
                     "description":it.description,
@@ -24,7 +24,7 @@ class BootStrap {
         JSON.registerObjectMarshaller(SeatConsumer) {
             def marshallerMap = [
                     "count":it.count,
-                    "description":it.description,
+                    "description":it.name?"${it.name}: ${it.description}":it.description,
                     "category":it.category,
                     "strict":it.strict
             ]

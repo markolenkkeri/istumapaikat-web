@@ -4,6 +4,7 @@ class SeatConsumer {
 
     int count
     String description
+    String name
     int category
     boolean strict
 
