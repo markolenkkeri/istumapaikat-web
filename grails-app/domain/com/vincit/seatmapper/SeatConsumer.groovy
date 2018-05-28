@@ -16,5 +16,6 @@ class SeatConsumer {
     }
 
     static constraints = {
+        name nullable:true
     }
 }
